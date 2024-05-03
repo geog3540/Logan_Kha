@@ -1,2 +1,2 @@
-# This repository is for for Logan Kha's Geographic Visualization portfolio
+#Geographic Visualization Portfolio
 GEOG3540/lkha - Logan Kha

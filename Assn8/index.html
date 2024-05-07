@@ -37,9 +37,9 @@
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="../shortbio.html">About</a></li>
-							<li><a href="../files/koylu_cv_23.pdf">Resume</a></li>
+							<li><a href="../files/kha_resume.pdf">Resume</a></li>
 							<li class="divider"></li>
-							<li><a href="caglar-koylu@uiowa.edu">Contact</a></li>
+							<li><a href="mailto:logankhav@gmail.com">Contact</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -116,10 +116,10 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = 'data/CalES.json'
+	var polygonJSONFile = 'data/CESG.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
-	var widthheightRatio = 0.4;
+	var widthheightRatio = 1;
 	// Relative placement of legend that ranges between 0 and 1.
 	// 0 is the start, whereas 1 i the end of each panel.
 	// If you want to put the legend on the left, then use 0.
@@ -367,30 +367,30 @@
 						panel.select('.legendQuant').call(holdLegend.scale(current_scale));
 
 						// add north arrow
-						// panel
-						// .append('path')
-						// .attr('id', 'arrow')
-						// .attr("d", "M 6 0 12 12 6 9 0 12")
-						// .attr('fill', "black")
-						// .attr("transform", "translate(" + margin.left + "," + margin.top + ") rotate("+ 0 +")");
+						 panel
+						 .append('path')
+						 .attr('id', 'arrow')
+						 .attr("d", "M 6 0 12 12 6 9 0 12")
+						 .attr('fill', "black")
+						 .attr("transform", "translate(" + margin.left + "," + margin.top + ") rotate("+ 0 +")");
 
 					}); // end for each
 				});
 
-				function recalculateAttribute(attribute, multiplyby, divideby) {
+				//function recalculateAttribute(attribute, multiplyby, divideby) {
 					// Function to catch errors when normalizing an attribute
 					// console.log(p, n);
-					if (!+divideby) {
-						if(+multiplyby){
+					//if (!+divideby) {
+						//if(+multiplyby){
 							//if the attribute is multiplied by only (no divide by)
-							return (+multiplyby) * (+attribute);
-						}else{
-								return null;
-						}
-					} else {
-						return ((+multiplyby) * (+attribute)) / +divideby;
-					}
-				}
+							//return (+multiplyby) * (+attribute);
+					//	}else{
+				//				return null;
+				//		}
+				//	} else {
+					//	return ((+multiplyby) * (+attribute)) / +divideby;
+				//	}
+			//	}
 
 				function classPolygon(polygon, map) {
 					// Function to create the correct CSS style name for each polygon.
